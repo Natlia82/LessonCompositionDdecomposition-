@@ -1,43 +1,11 @@
 import React, {Fragment} from 'react';
+import List from './List';
+import ListItem from './ListItem';
+import Searh from './Searh';
 /**
- * формирование списка с заголовком
- * @param {items}  - массив обьектов для заполнения списка 
- * @param {headline}  - заголовок 
- * @param {styling} param3 - название класса для стиля 
- * @returns разметка
- */
-function List({ items, styling, headline,  children}) {
-  return (  <div>
-            { headline && <h3>{headline}</h3> }
-            <ul className={styling}>
-               {children(items)}
-               
-            </ul>
-            </div>
-  )
-  
-}
-/**
- * построение списков
- * @param {*} param0 
+ * собираем все блоки в одну страницу
  * @returns 
  */
-function ListItem({children}) {
-    return <li>
-            {children}
-           </li>
-}
-/**
- * блок поиска
- */
-function Searh() {
-  return <div className='exchangeRate'>
-            <img src='#' />
-            <input type='text'></input>
-            <button>Найти</button>
-         </div>
-}
-
 
 function Component() {
   //список новостей
